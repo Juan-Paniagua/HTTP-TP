@@ -26,7 +26,48 @@ if(request.method === "GET" && request.url === "/") {
     const list = readDb()
     response.writeHead(200, { "Content-Type": "application/json" });
     response.end(JSON.stringify(list));
-} 
+} else if (request.method === "POST" && request.url === "/products") {
+    let body = "";
+
+    request.on("data", (chunk) => {
+        body += chunk;
+    });
+
+    request.on("end", () => {
+        try {
+            const products = readDb();
+            const productToAdd = JSON.parse(body);
+
+            const existingProduct = products.find(
+                existingProduct => existingProduct.name.toLowerCase() === productToAdd.name.toLowerCase()
+            );
+
+            
+
+            const latestId = products.length > 0 ? Math.max(...products.map(product => product.id)) : 0;
+            productToAdd.id = latestId + 1;
+
+            const requiredFields = ["name", "class", "price", "prepTime", "delivery", "daysSpecial"];
+            const missingFields = requiredFields.filter(field => !(field in productToAdd));
+
+            if (missingFields.length > 0) {
+                response.statusCode = 400; 
+                response.end(`Error: Missing fields - ${missingFields.join(", ")}`);
+                return;
+            }
+
+            products.push(productToAdd);
+
+            fs.writeFileSync("./database/db.json", JSON.stringify(products));
+
+            response.end("Product added successfully");
+        } catch (error) {
+            console.error("Error", error);
+            response.statusCode = 400; 
+            response.end("Error adding the new product");
+        }
+    });
+}
 
 else if (request.url !== "/" || request.url !== "products") {
     response.writeHead(200, {"content-type": "text"})
