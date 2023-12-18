@@ -10,6 +10,7 @@ const port = process.env.PORT;
 console.log(port);
 
 const serverHttp = http.createServer((request, response) => {
+
 if(request.method === "GET" && request.url === "/") {
     const responseServer = {
     status: 200,
@@ -22,11 +23,15 @@ if(request.method === "GET" && request.url === "/") {
 }
     response.writeHead(200, {"content-type": "application/json"})
     response.end(JSON.stringify(responseServer));
-} else if (request.method === "GET" && request.url === "/products"){
+} 
+
+else if (request.method === "GET" && request.url === "/products"){
     const list = readDb()
     response.writeHead(200, { "Content-Type": "application/json" });
     response.end(JSON.stringify(list));
-} else if (request.method === "POST" && request.url === "/products") {
+} 
+
+else if (request.method === "POST" && request.url === "/products") {
     let body = "";
 
     request.on("data", (chunk) => {
