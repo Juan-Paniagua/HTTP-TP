@@ -1,0 +1,121 @@
+[{
+    "name": "Hamburguesa",
+    "class": "Carne",
+    "price": 10.99,
+    "prepTime": 15,
+    "delivery": true,
+    "daysSpecial": false,
+    "id": 1
+}, {
+    "name": "Ensalada César",
+    "class": "Ensalada",
+    "price": 8.49,
+    "prepTime": 10,
+    "delivery": true,
+    "daysSpecial": true,
+    "id": 2
+}, {
+    "name": "Pasta Carbonara",
+    "class": "Pasta",
+    "price": 12.99,
+    "prepTime": 20,
+    "delivery": true,
+    "daysSpecial": false,
+    "id": 3
+}, {
+    "name": "Sushi Variado",
+    "class": "Pescado",
+    "price": 15.99,
+    "prepTime": 25,
+    "delivery": true,
+    "daysSpecial": true,
+    "id": 4
+}, {
+    "name": "Pizza Margarita",
+    "class": "Pizza",
+    "price": 11.49,
+    "prepTime": 18,
+    "delivery": true,
+    "daysSpecial": false,
+    "id": 5
+}, {
+    "name": "Pollo a la Parrilla",
+    "class": "Carne",
+    "price": 13.99,
+    "prepTime": 22,
+    "delivery": true,
+    "daysSpecial": true,
+    "id": 6
+}, {
+    "name": "Enchiladas",
+    "class": "Mexicana",
+    "price": 9.99,
+    "prepTime": 15,
+    "delivery": true,
+    "daysSpecial": false,
+    "id": 7
+}, {
+    "name": "Cesar Wrap",
+    "class": "Ensalada",
+    "price": 7.99,
+    "prepTime": 12,
+    "delivery": true,
+    "daysSpecial": false,
+    "id": 8
+}, {
+    "name": "Lasagna",
+    "class": "Pasta",
+    "price": 14.49,
+    "prepTime": 30,
+    "delivery": true,
+    "daysSpecial": true,
+    "id": 9
+}, {
+    "name": "Tacos al Pastor",
+    "class": "Mexicana",
+    "price": 10.49,
+    "prepTime": 18,
+    "delivery": true,
+    "daysSpecial": false,
+    "id": 10
+}, {
+    "name": "Sopa de Lentejas",
+    "class": "Sopa",
+    "price": 6.99,
+    "prepTime": 12,
+    "delivery": true,
+    "daysSpecial": false,
+    "id": 11
+}, {
+    "name": "Rollitos de Primavera",
+    "class": "Vegetariana",
+    "price": 8.99,
+    "prepTime": 15,
+    "delivery": true,
+    "daysSpecial": true,
+    "id": 12
+}, {
+    "name": "Burrito de Pollo",
+    "class": "Mexicana",
+    "price": 11.99,
+    "prepTime": 20,
+    "delivery": true,
+    "daysSpecial": false,
+    "id": 13
+}, {
+    "name": "Ensalada de Frutas",
+    "class": "Ensalada",
+    "price": 5.99,
+    "prepTime": 8,
+    "delivery": true,
+    "daysSpecial": true,
+    "id": 14
+}, {
+    "name": "Parrillada Mixta",
+    "class": "Carne",
+    "price": 18.99,
+    "prepTime": 35,
+    "delivery": true,
+    "daysSpecial": false,
+    "id": 15
+}]
