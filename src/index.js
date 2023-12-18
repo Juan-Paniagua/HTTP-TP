@@ -75,9 +75,9 @@ if(request.method === "GET" && request.url === "/") {
 
 else if (request.url !== "/" || request.url !== "products") {
     response.writeHead(200, {"content-type": "text"})
-    response.end("Error de peticion");
+    response.end("petition error");
 }});
 
 serverHttp.listen(port, () => {
-console.log(`Servidor escuchando en http://localhost:${port}/`);
+console.log(`Server listening on http://localhost:${port}/`);
 });
