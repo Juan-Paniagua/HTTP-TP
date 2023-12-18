@@ -22,6 +22,10 @@ if(request.method === "GET" && request.url === "/") {
 }
     response.writeHead(200, {"content-type": "application/json"})
     response.end(JSON.stringify(responseServer));
+} else if (request.method === "GET" && request.url === "/products"){
+    const list = readDb()
+    response.writeHead(200, { "Content-Type": "application/json" });
+    response.end(JSON.stringify(list));
 } 
 
 else if (request.url !== "/" || request.url !== "products") {
