@@ -42,7 +42,11 @@ if(request.method === "GET" && request.url === "/") {
                 existingProduct => existingProduct.name.toLowerCase() === productToAdd.name.toLowerCase()
             );
 
-            
+            if (existingProduct) {
+                response.statusCode = 400; 
+                response.end("Error: Product with the same name already exists");
+                return;
+            }
 
             const latestId = products.length > 0 ? Math.max(...products.map(product => product.id)) : 0;
             productToAdd.id = latestId + 1;
